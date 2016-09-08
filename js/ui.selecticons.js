@@ -3,20 +3,20 @@
   'use strict';
 
   $.widget('custom.selecticons', $.ui.selectmenu, {
-    _renderItem: function( ul, item ) {
-      var li = $( "<li>", { text: item.label } );
+    _renderItem: function (ul, item) {
+      var li = $('<li>', {text: item.label});
 
-      if ( item.disabled ) {
+      if (item.disabled) {
         li.addClass('ui-state-disabled');
       }
 
-      $( "<span>", {
+      $('<span>', {
         style: item.element.attr('data-style'),
-        "class": item.element.attr('data-class')
+        class: item.element.attr('data-class')
       })
-        .appendTo( li );
+      .appendTo(li);
 
-      return li.appendTo( ul );
+      return li.appendTo(ul);
     }
   });
 
@@ -30,7 +30,7 @@
           var button = $('#' + this.id + '-button');
 
           // Create element for current selection's icon.
-          button.prepend('<span class="ui-current-item-icon ' + currentClasses + '"></span>')
+          button.prepend('<span class="ui-current-item-icon ' + currentClasses + '"></span>');
         },
         select: function (event, ui) {
           // Get current option's icon element.
@@ -46,23 +46,23 @@
         change: function () {
           $(this).trigger('change');
         },
-        open: function() {
+        open: function () {
           if ($().mCustomScrollbar) {
-            $(".ui-menu").mCustomScrollbar({
-              setHeight:200,
-              theme:"dark-3",
-              mouseWheel:{ preventDefault:true },
-              scrollButtons: { enable: true}
+            $('.ui-menu').mCustomScrollbar({
+              setHeight: 200,
+              theme: 'dark-3',
+              mouseWheel: {preventDefault: true},
+              scrollButtons: {enable: true}
             });
           }
         },
-        close: function() {
+        close: function () {
           if ($().mCustomScrollbar) {
-            $(".ui-menu").mCustomScrollbar("destroy");
+            $('.ui-menu').mCustomScrollbar('destroy');
           }
         },
         width: 200
       });
     }
-  }
+  };
 }(jQuery, Drupal, drupalSettings, this));
