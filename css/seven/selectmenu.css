@@ -112,3 +112,8 @@
   background: #0072b9;
   color: #fff;
 }
+
+/* Fix element position when is presented inside dragable table */
+tr.draggable .form-type-select-icons {
+  display: inline-block;
+}
