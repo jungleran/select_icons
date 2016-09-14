@@ -51,7 +51,6 @@
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
   font-weight: 600;
   font-size: 14px;
-  font-size: 0.875rem;  /* 5 */
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;  /* 6 */
