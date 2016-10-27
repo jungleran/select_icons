@@ -6,11 +6,12 @@ selecticons:
     component:
       css/seven/selectmenu.css: {}
   dependencies:
+    - core/drupal
+    - core/drupalSettings
     - core/jquery
     - core/jquery.ui
     - core/jquery.ui.selectmenu
     - select_icons/mCustomScrollbar
-    - core/drupalSettings
 
 mCustomScrollbar:
   remote: https://github.com/malihu/malihu-custom-scrollbar-plugin
