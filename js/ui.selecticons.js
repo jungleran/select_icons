@@ -63,6 +63,16 @@
         },
         width: 200
       });
+
+      if ($('.selecticons').css( "direction" ) == "rtl" ) {
+        $('.selecticons').selecticons({
+          position: {
+            my: "right top",
+            at: "right bottom",
+            collision: "none"
+          }
+        });
+      }
     }
   };
 }(jQuery, Drupal, drupalSettings, this));

@@ -6,7 +6,7 @@
 }
 
 [dir="rtl"] .ui-selectmenu-button span.ui-icon {
-  left: 0.5em;
+  left: 7px;
   right: auto;
 }
 
@@ -22,7 +22,7 @@
   top: 4px;
   left: 55px;
   z-index: 11;
-  font-weight: 600;
+  font-weight: 400;
 }
 .selecticons + .ajax-progress .throbber {
   padding-right: 6px;
@@ -35,12 +35,11 @@
   box-sizing: border-box;
   display: inline-block;
   position: relative;  /* 1 */
-  text-align: center;
   line-height: normal;  /* 2 */
   cursor: pointer;
   -webkit-appearance: none;  /* 3 */
   -moz-appearance: none;  /* 3 */
-  padding: 4px 1.5em;  /* 4 */
+  padding: 4px 18px;  /* 4 */
   border: 1px solid #a6a6a6;
   border-radius: 20em;
   background-color: #f2f1eb;
@@ -49,11 +48,13 @@
   color: #333;
   text-decoration: none;
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;  /* 6 */
+  width: auto !important;
+  min-width: 200px;
 }
 .ui-widget.ui-selectmenu-button:hover,
 .ui-widget.ui-selectmenu-button:focus {
@@ -66,6 +67,31 @@
 }
 .ui-widget.ui-selectmenu-button:hover {
   box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.125);
+}
+
+.ui-widget.ui-selectmenu-button .ui-current-item-icon {
+  margin: -1px 0 0 0;
+  float: none;
+  vertical-align: middle;
+}
+.ui-selectmenu-menu .ui-menu-item {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 25px;
+}
+.ui-selectmenu-menu .ui-menu-item span {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+[dir="rtl"] .ui-selectmenu-menu .ui-menu-item {
+  padding-right: 25px;
+  padding-left: 5px;
+}
+[dir="rtl"] .ui-selectmenu-menu .ui-menu-item span {
+  left: auto;
+  right: 5px;
 }
 
 /* Prevent focus ring being covered by next siblings. */
@@ -86,8 +112,14 @@
 
 /* Reset default selectmenu inner div properties */
 .ui-selectmenu-button span.ui-selectmenu-text {
-  padding: 0;
+  padding: 3px 10px 3px 5px;
   line-height: inherit;
+  display: inline-block;
+  text-overflow: inherit;
+  overflow: visible;
+}
+[dir="rtl"] .ui-selectmenu-button span.ui-selectmenu-text {
+  padding: 3px 5px 3px 10px;
 }
 
 /* Style opened list - this is the same as .ui-autocomplete */
@@ -96,6 +128,8 @@
   max-height: 10em;
   background: #fff;
   border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
 }
 
 /* Adjust border radius to make the dropdown look like part of the button itself */
