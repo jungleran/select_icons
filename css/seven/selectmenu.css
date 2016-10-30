@@ -31,6 +31,11 @@
   opacity: 0.15;
 }
 
+.ui-widget.ui-selectmenu-button,
+.ui-selectmenu-menu .ui-menu-item {
+  font-weight: 400;
+  font-size: 12px;
+}
 .ui-widget.ui-selectmenu-button {
   box-sizing: border-box;
   display: inline-block;
@@ -48,8 +53,6 @@
   color: #333;
   text-decoration: none;
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
-  font-weight: 400;
-  font-size: 14px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;  /* 6 */
