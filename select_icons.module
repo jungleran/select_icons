@@ -6,11 +6,11 @@ use Drupal\Core\Render\Element;
  * Implements hook_theme().
  */
 function select_icons_theme($existing, $type, $theme, $path) {
-  return array(
-    'select_icons' => array(
+  return [
+    'select_icons' => [
       'render element' => 'element',
-    ),
-  );
+    ],
+  ];
 }
 
 /**
@@ -30,8 +30,8 @@ function select_icons_theme($existing, $type, $theme, $path) {
  */
 function template_preprocess_select_icons(&$variables) {
   $element = $variables['element'];
-  Element::setAttributes($element, array('id', 'name', 'size'));
-  Element\RenderElement::setAttributes($element, array('form-select'));
+  Element::setAttributes($element, ['id', 'name', 'size']);
+  Element\RenderElement::setAttributes($element, ['form-select']);
 
   $variables['attributes'] = $element['#attributes'];
   $variables['options_attributes'] = $element['#options_attributes'];

@@ -30,7 +30,7 @@ class SelectIcons extends Select {
     $info['#theme'] = 'select_icons';
 
     // We also provide custom attribute to allow per option attributes.
-    $info['#options_attributes'] = array();
+    $info['#options_attributes'] = [];
 
     return $info;
   }
