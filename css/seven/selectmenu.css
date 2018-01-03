@@ -153,3 +153,8 @@
 tr.draggable .form-type-select-icons {
   display: inline-block;
 }
+
+/* Remove padding around icons */
+.ui-selectmenu-menu .ui-menu .ui-menu-item-wrapper {
+  padding: unset;
+}
