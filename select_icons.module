@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Render\Element\RenderElement;
 use Drupal\Core\Render\Element;
 
 /**
@@ -31,7 +32,7 @@ function select_icons_theme($existing, $type, $theme, $path) {
 function template_preprocess_select_icons(&$variables) {
   $element = $variables['element'];
   Element::setAttributes($element, ['id', 'name', 'size']);
-  Element\RenderElement::setAttributes($element, ['form-select']);
+  RenderElement::setAttributes($element, ['form-select']);
 
   $variables['attributes'] = $element['#attributes'];
   $variables['options_attributes'] = $element['#options_attributes'];

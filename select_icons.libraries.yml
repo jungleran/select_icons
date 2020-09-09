@@ -10,7 +10,7 @@ selecticons:
     - core/drupalSettings
     - core/jquery
     - core/jquery.ui
-    - core/jquery.ui.selectmenu
+    - jquery_ui_selectmenu/selectmenu
     - select_icons/mCustomScrollbar
 
 mCustomScrollbar:
